@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<script defer>
+		window.document.addEventListener("innerMessage", handleEvent, false)
+		function handleEvent(e) {
+			console.log(e.detail)
+		}
+	</script>
+</head>
+<body>
+	<div id="modal">
+		<iframe src="./child.html" frameborder="0"></iframe>
+	</div>
+</body>
+</html>

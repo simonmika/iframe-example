@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Child</title>
+	<style>
+		body {
+			background: cyan;
+			color: white;
+		}
+	</style>
+	<script>
+		function send(message) {
+			const event =  new CustomEvent("innerMessage", { detail: message })
+			window.parent.document.dispatchEvent(event)
+		}
+	</script>
+</head>
+<body>
+	<h3>Child</h3>
+	<button onclick="send({ message: 'close' })">Send</button>
+</body>
+</html>
